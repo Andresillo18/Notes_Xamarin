@@ -15,6 +15,8 @@ namespace Notes.Data
             database.CreateTableAsync<Note>().Wait();
         }
 
+        //Task es una operación asíncrona, sigue trabajando en segundo plano
+        //Siempre se usará task para los métodos
         public Task<List<Note>> GetNotesAsync()
         {
             //Get all notes.
@@ -24,6 +26,7 @@ namespace Notes.Data
         public Task<Note> GetNoteAsync(int id)
         {
             // Get a specific note.
+            //Linq como consulta
             return database.Table<Note>()
                             .Where(i => i.ID == id)
                             .FirstOrDefaultAsync();
