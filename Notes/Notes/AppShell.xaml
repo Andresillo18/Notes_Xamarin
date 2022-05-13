@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Shell xmlns="http://xamarin.com/schemas/2014/forms"
+       xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+       xmlns:views="clr-namespace:Notes.Views"
+       x:Class="Notes.AppShell">
+    <!-- Display a bottom tab bar containing two tabs -->
+    <!--Aquí se debería mostrar las notas de NotesPage.xaml?-->
+    <TabBar>
+        <ShellContent Title="Notes"
+                      Icon="icon_feed.png"
+                      ContentTemplate="{DataTemplate views:NotesPage}" />
+        <ShellContent Title="About"
+                      Icon="icon_about.png"
+                      ContentTemplate="{DataTemplate views:AboutPage}" />
+        <Tab Title="Users"
+                      Icon="https://cdn-icons.flaticon.com/png/512/1144/premium/1144760.png?token=exp=1652298129~hmac=054dfc2a8906f1b3d258f36f0404ef63">
+
+            <ShellContent ContentTemplate="{DataTemplate views:UsersPage}" />
+        </Tab >
+    </TabBar>
+</Shell>
