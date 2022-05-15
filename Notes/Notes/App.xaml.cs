@@ -16,6 +16,7 @@ namespace Notes
             {
                 if (database == null)
                 {
+                    //Crea la base de datos en alguna carpeta del dispositivo
                     database = new NoteDatabase(Path.Combine(Environment.GetFolderPath(Environment.SpecialFolder.LocalApplicationData), "Notes.db3"));
                 }
                 return database;

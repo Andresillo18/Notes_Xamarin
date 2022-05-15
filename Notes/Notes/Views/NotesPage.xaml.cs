@@ -34,7 +34,7 @@ namespace Notes.Views
             if (e.CurrentSelection != null)
             {
                 // Navigate to the NoteEntryPage, passing the ID as a query parameter.
-                Note note = (Note)e.CurrentSelection.FirstOrDefault();
+                Note note = (Note)e.CurrentSelection.FirstOrDefault(); //FirstOrDefault devuelve el primer o la secuencia del elemento
                 await Shell.Current.GoToAsync($"{nameof(NoteEntryPage)}?{nameof(NoteEntryPage.ItemId)}={note.ID.ToString()}");
             }
         }
